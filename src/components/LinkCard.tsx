@@ -21,9 +21,21 @@ export default function LinkCard({ id, title, url }: LinkCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={recordClick}
-      className="block w-full rounded-xl border border-gray-200 bg-white px-5 py-4 text-center font-medium shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-400 hover:shadow-md active:translate-y-0"
+      className="group relative flex w-full items-center justify-center rounded-2xl border border-white/80 bg-white/60 px-12 py-4 text-[15px] font-semibold text-stone-800 shadow-[0_1px_2px_rgba(120,70,30,0.06),0_8px_24px_-16px_rgba(120,70,30,0.35)] backdrop-blur-md transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-[0_2px_4px_rgba(120,70,30,0.06),0_14px_30px_-14px_rgba(200,100,40,0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400 active:translate-y-0 active:scale-[0.99]"
     >
       {title}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="absolute right-5 size-4 text-stone-400 transition duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-orange-500"
+      >
+        <path d="M5 11 11 5M6 5h5v5" />
+      </svg>
     </a>
   );
 }
